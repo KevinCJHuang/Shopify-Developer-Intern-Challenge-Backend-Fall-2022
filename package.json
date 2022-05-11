@@ -1,0 +1,12 @@
+{
+  "name": "backend-challenge",
+  "version": "1.0.0",
+  "description": "Inventory tracker app for Shopify Developer Intern Challenge Question, Fall 2022",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
