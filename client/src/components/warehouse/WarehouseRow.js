@@ -1,9 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import WarehouseContext from '../../context/warehouse/warehouseContext';
+import React from 'react';
 
 const WarehouseRow = (props) => {
-  const warehouseContext = useContext(WarehouseContext);
   const { name, city } = props.warehouse;
   return (
     <tr>

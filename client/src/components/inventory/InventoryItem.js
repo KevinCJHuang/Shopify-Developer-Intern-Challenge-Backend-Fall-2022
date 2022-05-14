@@ -1,10 +1,8 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import React, { useContext, useState } from 'react';
 import InventoryContext from '../../context/inventory/inventoryContext';
 import WarehouseContext from '../../context/warehouse/warehouseContext';
-
-// import GithubContext from '../../context/github/githubContext';
 
 const InventoryItem = (props) => {
   const inventoryContext = useContext(InventoryContext);

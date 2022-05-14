@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-// const validateToken = require('../middleware/validateToken');
 const { check, validationResult } = require('express-validator');
 
 const Inventory = require('../models/Inventory');
@@ -8,7 +7,7 @@ const { default: mongoose } = require('mongoose');
 
 // @route       GET /inventory/
 // @desc        Get all inventories
-// @access      Private
+// @access      Public
 router.get('/', async (req, res) => {
   try {
     const inventories = await Inventory.find({});
@@ -21,7 +20,7 @@ router.get('/', async (req, res) => {
 
 // @route       POST /inventory/
 // @desc        Add an inventory
-// @access      Private
+// @access      Public
 router.post(
   '/',
   [
@@ -58,7 +57,7 @@ router.post(
 
 // @route       PUT /inventory/:id
 // @desc        Edit an inventory with id
-// @access      Private
+// @access      Public
 router.put('/:id', async (req, res) => {
   const { warehouse, name, quantity } = req.body;
   const InventoryFields = {};
@@ -88,7 +87,7 @@ router.put('/:id', async (req, res) => {
 
 // @route       DELETE /inventory/:id
 // @desc        Delete an inventory item
-// @access      Private
+// @access      Public
 router.delete('/:id', async (req, res) => {
   try {
     let inventory = await Inventory.findById(req.params.id);
