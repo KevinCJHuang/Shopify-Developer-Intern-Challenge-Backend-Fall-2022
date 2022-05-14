@@ -1,4 +1,4 @@
-# Shopify-Developer-Intern-Challenge-Backend-Fall-2022
+# Shopify Developer Intern Challenge - Backend Fall 2022
 
 ## Introduction
 This web app is created for Shopify's [Backend Developer Intern Technical Challenge](https://docs.google.com/document/d/1PoxpoaJymXmFB3iCMhGL6js-ibht7GO_DkCF2elCySU/edit). I chose to implement the "Ability to create warehouses/locations and assign inventory to specific locations" as the additional feature to the basic CRUD operations of Inventory items.
