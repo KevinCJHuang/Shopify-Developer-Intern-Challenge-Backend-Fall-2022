@@ -1,12 +1,10 @@
 import React from 'react';
-import InventoryBoard from './components/inventory/InventoryBoard';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import InventoryItem from './components/inventory/InventoryItem';
-
 import InventoryState from './context/inventory/InventoryState';
 import WarehouseState from './context/warehouse/WarehouseState';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const App = () => {
   return (
     <InventoryState>

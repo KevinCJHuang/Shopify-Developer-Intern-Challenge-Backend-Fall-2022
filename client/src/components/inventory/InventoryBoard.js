@@ -7,13 +7,12 @@ const InventoryBoard = () => {
   const inventoryContext = useContext(InventoryContext);
   const { inventories, createInventory } = inventoryContext;
   const warehouseContext = useContext(WarehouseContext);
+  const warehouses = warehouseContext.warehouses;
 
   const [inventoryState, setInventoryState] = useState({
     nameState: '',
     quantityState: '',
-    warehouseState: warehouseContext.warehouses.length
-      ? warehouseContext.warehouses[0].name
-      : '',
+    warehouseState: warehouses.length ? warehouses[0].name : '',
   });
   const { nameState, quantityState, warehouseState } = inventoryState;
 
@@ -22,9 +21,7 @@ const InventoryBoard = () => {
     createInventory({
       name: nameState,
       quantity: quantityState,
-      warehouse: warehouseContext.warehouses.filter(
-        (w) => w.name === warehouseState
-      )[0]._id,
+      warehouse: warehouses.filter((w) => w.name === warehouseState)[0]._id,
     });
   };
 
@@ -93,7 +90,7 @@ const InventoryBoard = () => {
             value={warehouseState}
           >
             <option>Select a warehouse location</option>
-            {warehouseContext.warehouses.map((warehouse) => (
+            {warehouses.map((warehouse) => (
               <option value={warehouse.name} key={warehouse._id}>
                 {warehouse.name}
               </option>

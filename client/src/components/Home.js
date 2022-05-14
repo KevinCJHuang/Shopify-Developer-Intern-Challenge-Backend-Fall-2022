@@ -10,6 +10,7 @@ const Home = () => {
     inventoryContext.readInventories();
     // eslint-disable-next-line
   }, []);
+
   return (
     <div>
       <div className='container'>
